@@ -7,12 +7,12 @@
 
 import Foundation
 struct FetchService {
-    enum FetchError: Error{
+    private enum FetchError: Error{
         case badResponse
     }
     
-    let baseURL = URL(string: "https://breaking-bad-api-six.vercel.app/api")!
-    /*"https://breaking-bad-api-six.vercel.app/api/quotes/random?production = Breaking+ Bad" */
+   private  let baseURL = URL(string: "https://breaking-bad-api-six.vercel.app/api")!
+
     
     func fetchQuote(from show:String) async throws -> Quote{
         //Build fetch Url
@@ -40,7 +40,7 @@ struct FetchService {
     func fetchCharacter(_ name:String) async throws -> Character{
         
         let characterURL = baseURL.appending(path: "characters")
-        let fetchURL = characterURL.appending(queryItems: [URLQueryItem(name: name, value: name)])
+        let fetchURL = characterURL.appending(queryItems: [URLQueryItem(name: "name", value: name)])
         
         let (data,response) = try await URLSession.shared.data(from: fetchURL)
         
@@ -56,7 +56,7 @@ struct FetchService {
         
     }
     func fetchDeath(for character: String) async throws -> Death?{
-        let fetachURL = baseURL.appending(path: "death")
+        let fetachURL = baseURL.appending(path: "deaths")
         
         let (data,response) = try await URLSession.shared.data(from: fetachURL)
         guard let response = response as? HTTPURLResponse , response.statusCode == 200 else{
