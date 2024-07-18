@@ -20,6 +20,7 @@
 		4A10EB1E2C4805500098FB89 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB1D2C4805500098FB89 /* FetchService.swift */; };
 		4A10EB222C4831E40098FB89 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB212C4831E40098FB89 /* QuoteView.swift */; };
 		4A10EB242C483F430098FB89 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB232C483F430098FB89 /* ViewModel.swift */; };
+		4AAE8EA22C4939CB00640325 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE8EA12C4939CB00640325 /* CharacterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4A10EB1D2C4805500098FB89 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		4A10EB212C4831E40098FB89 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		4A10EB232C483F430098FB89 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4AAE8EA12C4939CB00640325 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				4A10EB022C47F5520098FB89 /* BreakingBadQuotesApp.swift */,
 				4A10EB042C47F5520098FB89 /* ContentView.swift */,
+				4AAE8EA12C4939CB00640325 /* CharacterView.swift */,
 				4A10EB212C4831E40098FB89 /* QuoteView.swift */,
 				4A10EB1D2C4805500098FB89 /* FetchService.swift */,
 				4A10EB232C483F430098FB89 /* ViewModel.swift */,
@@ -181,6 +184,7 @@
 				4A10EB222C4831E40098FB89 /* QuoteView.swift in Sources */,
 				4A10EB182C47FB830098FB89 /* Quote.swift in Sources */,
 				4A10EB1E2C4805500098FB89 /* FetchService.swift in Sources */,
+				4AAE8EA22C4939CB00640325 /* CharacterView.swift in Sources */,
 				4A10EB242C483F430098FB89 /* ViewModel.swift in Sources */,
 				4A10EB1A2C47FB8F0098FB89 /* Character.swift in Sources */,
 			);
