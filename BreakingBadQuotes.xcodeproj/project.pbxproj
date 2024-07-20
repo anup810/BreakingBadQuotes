@@ -20,7 +20,10 @@
 		4A10EB1E2C4805500098FB89 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB1D2C4805500098FB89 /* FetchService.swift */; };
 		4A10EB222C4831E40098FB89 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB212C4831E40098FB89 /* QuoteView.swift */; };
 		4A10EB242C483F430098FB89 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10EB232C483F430098FB89 /* ViewModel.swift */; };
+		4A4631592C49E98200C64F74 /* sampleepisode.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A4631582C49E98200C64F74 /* sampleepisode.json */; };
 		4AAE8EA22C4939CB00640325 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE8EA12C4939CB00640325 /* CharacterView.swift */; };
+		4AD913B42C4B46A900127033 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD913B32C4B46A900127033 /* StringExt.swift */; };
+		4AD913B62C4B484100127033 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD913B52C4B484100127033 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +41,10 @@
 		4A10EB1D2C4805500098FB89 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		4A10EB212C4831E40098FB89 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		4A10EB232C483F430098FB89 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4A4631582C49E98200C64F74 /* sampleepisode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleepisode.json; sourceTree = "<group>"; };
 		4AAE8EA12C4939CB00640325 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		4AD913B32C4B46A900127033 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		4AD913B52C4B484100127033 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,8 @@
 				4A10EB172C47FB830098FB89 /* Quote.swift */,
 				4A10EB192C47FB8F0098FB89 /* Character.swift */,
 				4A10EB1B2C47FB9A0098FB89 /* Death.swift */,
+				4AD913B32C4B46A900127033 /* StringExt.swift */,
+				4AD913B52C4B484100127033 /* Constants.swift */,
 				4A10EB062C47F5530098FB89 /* Assets.xcassets */,
 				4A10EB102C47F5D80098FB89 /* SampleData */,
 				4A10EB082C47F5530098FB89 /* Preview Content */,
@@ -98,6 +106,7 @@
 		4A10EB102C47F5D80098FB89 /* SampleData */ = {
 			isa = PBXGroup;
 			children = (
+				4A4631582C49E98200C64F74 /* sampleepisode.json */,
 				4A10EB112C47F5EB0098FB89 /* samplecharacter.json */,
 				4A10EB122C47F5EB0098FB89 /* sampledeath.json */,
 				4A10EB132C47F5EB0098FB89 /* samplequote.json */,
@@ -164,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A10EB152C47F5EB0098FB89 /* sampledeath.json in Resources */,
+				4A4631592C49E98200C64F74 /* sampleepisode.json in Resources */,
 				4A10EB0A2C47F5530098FB89 /* Preview Assets.xcassets in Resources */,
 				4A10EB142C47F5EB0098FB89 /* samplecharacter.json in Resources */,
 				4A10EB162C47F5EB0098FB89 /* samplequote.json in Resources */,
@@ -179,9 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A10EB1C2C47FB9A0098FB89 /* Death.swift in Sources */,
+				4AD913B62C4B484100127033 /* Constants.swift in Sources */,
 				4A10EB052C47F5520098FB89 /* ContentView.swift in Sources */,
 				4A10EB032C47F5520098FB89 /* BreakingBadQuotesApp.swift in Sources */,
 				4A10EB222C4831E40098FB89 /* QuoteView.swift in Sources */,
+				4AD913B42C4B46A900127033 /* StringExt.swift in Sources */,
 				4A10EB182C47FB830098FB89 /* Quote.swift in Sources */,
 				4A10EB1E2C4805500098FB89 /* FetchService.swift in Sources */,
 				4AAE8EA22C4939CB00640325 /* CharacterView.swift in Sources */,
