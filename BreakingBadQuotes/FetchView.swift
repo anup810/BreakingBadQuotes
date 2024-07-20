@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuoteView: View {
+struct FetchView: View {
     let vm = ViewModel()
     let show:String
     @State var showCharacterInfo = false
@@ -27,7 +27,7 @@ struct QuoteView: View {
                             EmptyView()
                         case .fetching:
                             ProgressView()
-                        case .success:
+                        case .successQuote:
                             Text("\"\(vm.quote.quote)\"")
                                 .minimumScaleFactor(0.5)
                                 .multilineTextAlignment(.center)
@@ -61,31 +61,53 @@ struct QuoteView: View {
                             .sheet(isPresented: $showCharacterInfo, content: {
                                 CharacterView(character: vm.character, show: show)
                             })
+                        case .successEpisode:
+                            EpisodeView(episode: vm.episode)
                         
                         case .failed(let error):
                             Text(error.localizedDescription)
                           
                         }
                         
-                        Spacer()
+                        Spacer(minLength: 20)
                     }
-                    Button{
-                        Task{
-                            await vm.getData(for:show)
+                    HStack{
+                        Button{
+                            Task{
+                                await vm.getQuoteData(for:show)
+                            }
+                            
+                            
+                        }label: {
+                            Text("Get Random Quote")
+                                .font(.title3)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color("\(show.removeSpace())Button"))
+                                .clipShape(.rect(cornerRadius: 7, style: .circular))
+                                .shadow(color: Color("\(show.removeSpace())Shadow"), radius: 2)
                         }
-            
-                        
-                    }label: {
-                        Text("Get Random Quote")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color("\(show.removeSpace())Button"))
-                            .clipShape(.rect(cornerRadius: 7, style: .circular))
-                            .shadow(color: Color("\(show.removeSpace())Shadow"), radius: 2)
+                        Spacer()
+                        Button{
+                            Task{
+                                await vm.getEpisodeData(for:show)
+                            }
+                            
+                            
+                        }label: {
+                            Text("Get Episode Data")
+                                .font(.title3)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color("\(show.removeSpace())Button"))
+                                .clipShape(.rect(cornerRadius: 7, style: .circular))
+                                .shadow(color: Color("\(show.removeSpace())Shadow"), radius: 2)
+                        }
                     }
-                    Spacer(minLength: 95)
-     
+                    .padding(.horizontal,30)
+                        Spacer(minLength: 95)
+                        
+                        
                     
                 }.frame(width: geo.size.width, height: geo.size.height)
             }
@@ -95,6 +117,6 @@ struct QuoteView: View {
 }
 
 #Preview {
-    QuoteView(show: Constants.ecName)
+    FetchView(show: Constants.bbName)
         .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }
